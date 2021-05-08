@@ -30,22 +30,22 @@ public class MainClass {
 					aioobe.printStackTrace();
 				}
 			}
-			
+			AllMethodsClass a = new AllMethodsClass();
 			switch(s) {
 			case "ADD" :
-				AllMethodsClass.addEmployee(employeeList);
+				a.addEmployee(employeeList);
 				break;
 			case "UPDATE" :
-				AllMethodsClass.updateEmployee(employeeList);
+				a.updateEmployee(employeeList);
 				break;
 			case "DELETE" :
-				AllMethodsClass.deleteEmployee(employeeList);
+				a.deleteEmployee(employeeList);
 				break;
 			case "GET" :
 				if (empArgString == "")
-					AllMethodsClass.getAllEmployee(employeeList);
+					a.getAllEmployee(employeeList);
 				else
-					AllMethodsClass.getEmployee(employeeList,Integer.parseInt(empArgString));
+					a.getEmployee(employeeList,Integer.parseInt(empArgString));
 				break;
 			default :
 				System.out.println("INVALID INPUT");
