@@ -7,7 +7,7 @@ public class AllMethodsClass {
 
 	static Scanner sc = new Scanner(System.in);
 	
-	public void addEmployee(List<Employee> employeeList) {
+	public static void addEmployee(List<Employee> employeeList) {
 		do {
 			System.out.print("Enter Employee Name : ");
 			String empName = sc.nextLine().trim();
@@ -24,7 +24,7 @@ public class AllMethodsClass {
 		} while(sc.nextLine().trim().equalsIgnoreCase("Y"));
 	}
 	
-	public void updateEmployee(List<Employee> employeeList) {
+	public static void updateEmployee(List<Employee> employeeList) {
 		System.out.print("Enter Employee ID / INDEX : ");
 		long id = sc.nextLong();
 		sc.nextLine();
@@ -61,7 +61,7 @@ public class AllMethodsClass {
 		}
 	}
 	
-	public void getEmployee(List<Employee> employeeList, int id) {
+	public static void getEmployee(List<Employee> employeeList, int id) {
 		Employee emp = null;
 		for(Employee e : employeeList) {
 			if(e.getEmpId()==id||e.getEmpId()==10125+id) {
@@ -77,14 +77,14 @@ public class AllMethodsClass {
 		System.out.println(emp.getEmpId()+"\t"+emp.getEmpName()+"\t"+emp.getEmpAge()+"\t"+emp.getEmpAddress());
 	}
 
-	public void getAllEmployee(List<Employee> employeeList) {
+	public static void getAllEmployee(List<Employee> employeeList) {
 		System.out.println("empID\tempName\t\tempAge\tempAddress");
 		for(Employee emp : employeeList) {
 			System.out.println(emp.getEmpId()+"\t"+emp.getEmpName()+"\t"+emp.getEmpAge()+"\t"+emp.getEmpAddress());
 		}
 	}
 
-	public void deleteEmployee(List<Employee> employeeList) {
+	public static void deleteEmployee(List<Employee> employeeList) {
 		System.out.print("Enter Employee ID / INDEX : ");
 		long id = sc.nextLong();
 		Employee emp = null;
